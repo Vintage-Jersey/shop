@@ -117,7 +117,7 @@ function updateTotal() {
         jerseyCount += qty;
     });
     let shipping = calculateShipping(jerseyCount);
-    document.querySelector('.total-price').innerText = '€' + (total + shipping).toFixed(2);
+    document.querySelector('.total-price').innerText = '€' + (total ).toFixed(2);
 
     // Show shipping breakdown
     let totalDiv = document.querySelector('.total');
@@ -226,9 +226,9 @@ if (currentPage === "page1.html") {
 
 function calculateShipping(jerseyCount) {
     if (jerseyCount >= 5) return 0;
-    if (jerseyCount === 4) return 0;
-    if (jerseyCount === 3) return 0;
-    if (jerseyCount === 2) return 0;
-    if (jerseyCount === 1) return 0;
+    if (jerseyCount === 4) return 2;
+    if (jerseyCount === 3) return 3;
+    if (jerseyCount === 2) return 4;
+    if (jerseyCount === 1) return 5;
     return 0;
 }
