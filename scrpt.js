@@ -117,7 +117,7 @@ function updateTotal() {
         jerseyCount += qty;
     });
     let shipping = calculateShipping(jerseyCount);
-    document.querySelector('.total-price').innerText = '€' + (total ).toFixed(2);
+    document.querySelector('.total-price').innerText = '€' + (total + shipping ).toFixed(2);
 
     // Show shipping breakdown
     let totalDiv = document.querySelector('.total');
