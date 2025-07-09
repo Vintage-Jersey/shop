@@ -229,6 +229,6 @@ function calculateShipping(jerseyCount) {
     if (jerseyCount === 4) return 1;
     if (jerseyCount === 3) return 3;
     if (jerseyCount === 2) return 4;
-    if (jerseyCount === 1) return 5;
+    if (jerseyCount === 1) return 0;
     return 0;
 }
