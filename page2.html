@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <title>Football Jersey Store</title>
+    <script src="https://www.paypal.com/sdk/js?client-id=AU-JDOP0kU0Gk6K2jakwFoeEnpcEdUxVbAe6q9sVAaLO4hYfzAaxV3YHDzIQaD0k1eJoOIbg59eSjhYb&currency=EUR"></script>
+    <script src="scrpt.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      emailjs.init('kQNATSLNuKOL5T_VQ'); // Replace with your EmailJS user ID
+    </script>
+    <script>
+        window.currentPage = "page1";
+    </script>
+</head>
+<body>
+    
+
+    <header>
+        <div class="nav container">
+            <a href="." class="logo">Vintage Football Jersey</a>
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantitiy="0"></i>
+            <div class="cart">
+                <h2 class="cart-title">Your Bag</h2>
+                <div class="cart-content"></div>
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">€0</div>
+                </div>
+                <div id="paypal"></div>
+                <i class='bx bx-x' id="close-cart"></i>
+                <p>The delivery fees is: <ul>
+                <li>1 Jersey 5€</li>
+                <li>2 Jersey 4€</li>
+                <li>3 Jersey 3€</li>
+                <li>4 Jersey 1€</li>
+                <li>5+ Jersey free shipping</li>
+                </ul></p>
+            </div>
+        </div>
+    </header>
+    <div class="cart-overlay"></div>
+    <section class="shop container"> 
+        <h2 class="section-title">⚽ Shop Football Jerseys</h2>
+        <h3 class="warring">Our website is on early stage. If you want a jersey that we show on our tiktok or you want a player jersey contact us on tiktok or mail: vintagefootballjersey2025@gmail.com</h3>
+        <div class="shop-content">
+            <div class="product-box"> 
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjwZGTf7YPdeSIkfdLT0htwZdP1mfTuW4LJS6pBwQzRQxWobd8YVHyriZaJ7ylCA5qM8ExTeXRb20XemnJUBfGawtSrzrMdjJw57i3IQuvVg1BRcPYFUUWs7a9eQ_0I6Xel4iN3bMlxlhl50bUW6b99ne5GwJWvicxYlap2W0cuBjxNSi8QQ24dprsereiS" alt="" class="product-img"/>
+                <h4 class="product-title">FCB 3rd Away 23-24</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEigs-jxmK9Q_uJLExwOO8A5MHG2NZOKZvBhJ6tOaJalaEV5haExRGHspqEylk74Lz3n1emw75cWPLU6VIleRKBLjWv4JgLUkvZzyvQBzIHCtDgYtgHwhWkK6rPSscXK36OpKBB1VmXpAj_SYRVKVT4Phd2J16ToJmOe_by0TW9tV3-N7NrkumzkDeia1A7e" alt="" class="product-img"/>
+                <h4 class="product-title">Brazil GK 22-23</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiJZTLzNI8agKCUf4eiHH0PZ76Zl8TMseuiFmMTV4oibLFb3CJa-KSxfi3n62sgFYTcX3JZMO46hEN3hXAaLxAT0hs3SX4XJjW1yFy5ea_Z0zF5W5QwuSK23edG-ek8HEs0QPsGzlDikfNTkeeqwU6tGOSYyGdyb8LC1p5pSWo1A7ucgnxYO7lJzM9F6c9D" alt="" class="product-img"/>
+                <h4 class="product-title">Arsenal 3rd Away 24-25</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhLCnMErQWD9NgRS7-oAg90EpT-Hg9GTY8vfL99lorhi5Rl7qTQGCvxYy4eKLyRNtJEmFG-6vG5QtUjeOmxHn33qkyd_SLAoiJdPLOfyk6u257X683OerVU5k4xE3VaBjDOaloaVGnuhDfPZpATewGkAEG6XBE47pU71i-0NdhUkIU09cJkxVEL8CvV-r2I" alt="" class="product-img"/>
+                <h4 class="product-title">Arsenal Home 24-25</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgaEzDxeHPsKViSd41MG3qdc1SVZWuUVdBkpiuw0A4mcZg5K6knhI2V35VUeOViytTmb6_CgVbi6zG6-4uHxXXyDE20AVlJksD7SvlIPEElrFH32u0SW5QcM5dqQp2Kg5z6YKY5PKT1Ry15QKF1SLIiCF44Mn06MX8UYN1alUAQmcGmGWkKxEoszOBDYU4L" alt="" class="product-img"/>
+                <h4 class="product-title">AC MILANS X PLEASURES 24</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhGBzuyoseXkDTpSJYI-B0MyKjZruOWIfrZJO_OOzeKeVw_nr-e7cmGV_kk7yi1wt_XTOicR1ROGilwzoF-6MDHcYe57I81GkzmqvpoAf9ASlZWTFh84VA0KitjDaueqNFPKbQrH9URI1aGr2453gTj-vhMtHZH4SPA9TGxgXG9MfD2vT5er8aymWQa1apk" alt="" class="product-img"/>
+                <h4 class="product-title">Liverpool SE Red</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhWDN-bFUqRCvrdm2TVQ_0BBu9p76O7LF6hTQaocS0CHXNxEd2h7FVCkpZQ02ILtLuoI0YSiiTDqdI1t4Egdg4Z2jNDnU_5vD9YMMIFZEhj5dbn4xE1fatpy_pFtTqDbF6i3jNYw45rdNI_rAKivkP3coZIGC-bkYhmVHUZrnO__-diAyznpLeuZ7XmXPL_" alt="" class="product-img"/>
+                <h4 class="product-title">Liverpool SE Purple</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgXi7eyS2ogZCs1DvGu875dq4IWHsFdWlQNtiCYXcWIk4D3ZXLuScSBButW8hKVMIUPQPZPrpaCyqVYXwYvNeQbpaIooDN6LkC8phx4Y4Qn_XkP6YfmyRQPD55m7z2R8ZzS127pI41Pgmg269hn6SYMaUum7gP54Gy6M6_tv419PWj8crd35I8vkyjRnfp7" alt="" class="product-img"/>
+                <h4 class="product-title">Bayern Away 24-25</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEgHDAFTfc1vHHpDyXQbvapd6lOw_wM5xJQAYYyEey1hcZHv9XiMQI5gcZ629so8AE3To24v4FgXnp6DjIFdvLMHXXYZ7y1FPG6gqQCpibMcAkSwVjDJxCtcKa0qcN3hXUaaphhrO-jwqxUMcTjyb83B7Vui_w_wWaMB7HfswWljMDYgW7lwkKVZ6t_Gvmoc" alt="" class="product-img"/>
+                <h4 class="product-title">Argentina Away 22-23</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh-XOXhWnrYEIE60XN1HdUjWdZM0HfvPpToomMiwbDbtn0HQyovbp8xhW909IoWqLaFTAEn7WTDBFG9RZ9Zj-2MwFc8LYOmZxfWX0X1VZBIMAWnuAy-DzEjhj7p2RDk8BjdCkEcotIuEeXnoGEIxlHRTRMlgwXiNDU3NwGP18MkZEDo-ujGPKy3kXLThc9x" alt="" class="product-img"/>
+                <h4 class="product-title">Atletico Madrid Youth Away 19/20</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEggSHQsZ9hTl4Eey81uEazmMVTeK4fiERjhHCcOOcfbAgMdwDCloERXPZh3ua5Tw6Y2ujBL48_b9XUY4O7ZbhID6dqQtcz1p6HZRF_Op6KwkDBCJSLbhFxSyNKIcYtLowIiu9iv1BnVkRzs8sfjr8_ooFMiQiwL90Cic4DpidhVV_VrcU5hEBWOpij4kD_t" alt="" class="product-img"/>
+                <h4 class="product-title">Manchester City "Year of the Dragon" 23-24</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>   
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh01J_xoCTFgcwCW_uU8_lVMJtZexkslNFfvMHEL-H4dpgDzii-3JsPiTfUl-K5xPytIQMXCzVn5Bye6NN7l8jWtWi0xvNUUPjhQnDU4rE6uUv08FH1zqh2kTRIRRJwdutOzdog1dq66T8Paq-YERlb1OP9N7PPmQys12RfJVf7oFxN3E9szvPLkAOpApSh" alt="" class="product-img"/>
+                <h4 class="product-title">AC Milan Home 25-26</h4>
+                <span class="price">€25</span>
+                <div class="product-s">
+                    <p>Size</p>
+                    <select class="product-size">                 
+                       <option value="Small">Small</option>
+                       <option value="Medium">Medium</option>
+                       <option value="Large">Large</option>
+                       <option value="XLarge">XLarge</option>
+                       <option value="XXLarge">XXLarge</option>
+                    </select>
+                </div>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+    <div class="pages">
+        <a href="index.html">1</a> <a href="page2.html">2</a><a href="page3.html">3</a>
+    </div>
+</body>
+</html>
