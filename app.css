@@ -154,11 +154,7 @@ input:checked ~ .slide{
 .nav {
     display: flex;
     align-items: center;
-<<<<<<< HEAD
-    justify-content:space-between;
-=======
     justify-content: space-between;
->>>>>>> recover-local-changes
     padding: 20px 0;
     height: 50px;
 }
@@ -186,11 +182,7 @@ header{
     z-index: 99;
 }
 .logo{
-<<<<<<< HEAD
-    font-size: 1rem;
-=======
     font-size: 1.4rem;
->>>>>>> recover-local-changes
     color: rgb(0, 0, 0);
     font-weight: 600;
 }
@@ -330,11 +322,7 @@ header{
     border-radius: 5px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     min-height: 320px;
-<<<<<<< HEAD
-    padding-bottom: 50px;
-=======
     
->>>>>>> recover-local-changes
     display: flex;
     flex-direction: column;
     /* Ensure it can shrink, remove fixed width if you have one */
@@ -369,30 +357,14 @@ header{
 .product-img {
   width: 180px;      /* Set your desired width */
   height: 180px;     /* Set your desired height */
-<<<<<<< HEAD
-  object-fit: cover; /* Ensures the image covers the box without distortion */
-  border-radius: 5px;
-  margin-bottom: 0.5rem;
-=======
   object-fit: contain;/* Ensures the image covers the box without distortion */
   border-radius: 5px;
->>>>>>> recover-local-changes
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .product-title{
-<<<<<<< HEAD
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    /* --- MODIFIED --- */
-    margin-bottom: 0.1rem; /* Reduced gap after title */
-    /* ---------------- */
-    /* Consistent height for titles */
-    min-height: 2.2em;
-=======
     min-height: 2em;   /* Ensures all titles take up at least 2 lines of space */
     display: block;
     justify-content: flex-start;
@@ -400,18 +372,13 @@ header{
     font-weight: 600;
     text-transform: uppercase;
     white-space: normal;
->>>>>>> recover-local-changes
     line-height: 1.1em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .price{
     font-family: 500;
-<<<<<<< HEAD
-    margin-top: auto; /* Pushes the price to the bottom of the *flowing* content */
-=======
     /* Pushes the price to the bottom of the *flowing* content */
->>>>>>> recover-local-changes
     margin-bottom: 0.5rem; /* Small space between price and the absolute elements below */
 }
 .add-cart{
@@ -478,97 +445,9 @@ body.cart-open .cart-overlay {
     opacity: 1;
     pointer-events: all;
 }
-<<<<<<< HEAD
-@media (max-width: 1080px){
-    .nav {
-        padding: 14px 0;
-    }
-    section{
-        padding: 3rem 0 2rem;
-    }
-    .container {
-        margin: 0 auto;
-        width: 90%;
-    }
-    .shop{
-        margin-top: 2rem !important;
-    }
-}
-
-@media (max-width: 500px){
-    /* ... existing rules ... */
-
-    .shop-content {
-        /* Explicitly set 2 columns for mobile */
-        grid-template-columns: repeat(2, 1fr);
-        /* Adjust gap for smaller screens to save space */
-        gap: 0.7rem; /* or 10px, whatever looks good on your phone */
-        padding: 0 10px; /* Add some horizontal padding to the shop-content itself */
-    }
-
-    /* Adjust product image size within product box for mobile to ensure fit */
-    .product-box .product-img {
-        width: 100%; /* Make image take full width of its container */
-        height: auto; /* Maintain aspect ratio */
-        max-height: 150px; /* Or a fixed height if you prefer */
-        object-fit: contain; /* Use 'contain' to ensure the whole image is visible */
-    }
-    .product-title{
-        font-size: 1rem;
-    }
-    .product-box {
-        padding: 8px; /* Slightly less padding on mobile boxes */
-        min-height: 280px; /* Adjust min-height if needed for smaller content */
-        padding-bottom: 40px; /* Less space for absolute elements */
-    }
-
-    .product-box .price {
-        bottom: 25px; /* Adjust price position */
-    }
-
-    .product-box .add-cart {
-        bottom: 5px; /* Adjust add-cart button position */
-        right: 5px;
-        font-size: 1rem; /* Smaller icon */
-        padding: 8px; /* Smaller padding for button */
-    }
-
-    .product-box .product-s {
-        bottom: 10px; /* Adjust size dropdown position */
-        left: 5px;
-    }
-    .product-box .product-title {
-        font-size: 0.95rem; /* Slightly smaller font for titles */
-        min-height: 2.2em; /* Keep it consistent */
-        line-height: 1.1em;
-    }
-    .product-box .price {
-        font-size: 0.9rem; /* Smaller price font */
-    }
-    
-    .product-box .product-s select {
-        font-size: 0.65rem; /* Smaller size text and dropdown */
-    }
-
-    /* You might also want to adjust overall padding for the main content area */
-    .container {
-        padding: 0 10px; /* Add some padding to the main content container */
-    }
-}
-
-@media (max-width: 360px){
-    .shop{
-        margin-top: 1rem !important;
-    }
-    .cart{
-        width: 100%;
-    }
-}
-=======
 
 
 
->>>>>>> recover-local-changes
 #paypal{
     margin-top: 30px;
 }
@@ -621,36 +500,17 @@ body.cart-open .cart-overlay {
     outline: none;
     outline-color: none;
     padding: 5px;
-<<<<<<< HEAD
-    margin: 5px;
-    border-radius: 5px;
-    width: 100px;
-}
-.search {
-    position: static;
-    top: 100px;
-    display: flex;
-    margin: 10px;
-    flex-direction: column;
-}
-=======
     margin: 0px;
     border-radius: 5px;
     width: 600px;
     
 }
 
->>>>>>> recover-local-changes
 .search button{
     padding: 0;
     border: none;
     text-decoration: none; /* No underline */
     display: contents; /* Inline-block for proper spacing */
-<<<<<<< HEAD
-    
-    
-=======
->>>>>>> recover-local-changes
     cursor: pointer; /* Pointer cursor on hover */
 }
 .search img{
@@ -664,8 +524,6 @@ body.cart-open .cart-overlay {
 }
 .product-box.hide {
     display: none;
-<<<<<<< HEAD
-=======
 }
 @media (max-width: 1080px){
     .nav {
@@ -752,5 +610,4 @@ body.cart-open .cart-overlay {
     .container {
         padding: 0 10px; /* Add some padding to the main content container */
     }
->>>>>>> recover-local-changes
 }
