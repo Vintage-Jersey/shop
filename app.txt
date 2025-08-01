@@ -154,8 +154,9 @@ input:checked ~ .slide{
 .nav {
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content: space-between;
     padding: 20px 0;
+    height: 50px;
 }
 body{
     color: white;
@@ -181,15 +182,15 @@ header{
     z-index: 99;
 }
 .logo{
-    font-size: 1.1rem;
-    color: rgb(58, 172, 172);
+    font-size: 1.4rem;
+    color: rgb(0, 0, 0);
     font-weight: 600;
 }
 #cart-icon{
     position: relative;
     font-size: 1.8rem;
     cursor: pointer;
-    color: rgb(58, 172, 172);
+    color: rgb(0, 0, 0);
 }
 .total{
     color: black;
@@ -208,10 +209,10 @@ header{
     max-height: 400px; /* Adjust the height as needed */
     overflow-y: auto;
     overflow-x: hidden;
-    border: 1px solid #ddd;
+    /*border: 1px solid #ddd;*/
     padding: 20px;
     margin-bottom: 20px;
-        background-color: #F6FAFF;
+        /*background-color: #F6FAFF;
 /*#755757*/
 
     transition: 0.7s ease;
@@ -219,7 +220,7 @@ header{
 
 }
 .cart-content{
-    margin-top: 10px;
+    margin: 10px;
     background-color: #fff;
     padding: 5px;
     border-radius: 5px;
@@ -228,7 +229,7 @@ header{
     right: 0;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: -3px 0 5px rgb(201, 255, 247);
+    /*box-shadow: -3px 0 5px rgb(201, 255, 247);*/
     transition: 0.7s ease;
 
 }
@@ -315,18 +316,20 @@ header{
 }
 .product-box{
     color: black;
-    position: relative; /* Crucial for absolute positioning of children */
+    position: relative;
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    min-height: 320px; /* Set a fixed minimum height to accommodate all content */
-    padding-bottom: 50px; /* Add padding to make space for absolutely positioned elements */
-    /*box-shadow: ;*/
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack items vertically */
-}
+    min-height: 320px;
     
+    display: flex;
+    flex-direction: column;
+    /* Ensure it can shrink, remove fixed width if you have one */
+    /* Add max-width if you want to limit how large a single box can get on very large screens */
+    max-width: 100%; /* Important to prevent overflow within its grid cell */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}  
     
     
 .section-title{
@@ -340,40 +343,42 @@ header{
 .shop{
     margin-top: 2rem;
 }
+.shop h2{
+    text-align: center;
+}
 .shop-content{
-
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
-    gap: 1.5rem;
-
+    /* This allows it to fit as many columns as possible, each at least 220px wide. */
+    /* On larger screens, this will naturally go to 3 or 4 columns if there's space. */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem; /* Standard gap for larger screens */
+    margin-top: 2rem;
 }
 .product-img {
   width: 180px;      /* Set your desired width */
   height: 180px;     /* Set your desired height */
-  object-fit: cover; /* Ensures the image covers the box without distortion */
+  object-fit: contain;/* Ensures the image covers the box without distortion */
   border-radius: 5px;
-  margin-bottom: 0.5rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 .product-title{
+    min-height: 2em;   /* Ensures all titles take up at least 2 lines of space */
+    display: block;
+    justify-content: flex-start;
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    /* --- MODIFIED --- */
-    margin-bottom: 0.1rem; /* Reduced gap after title */
-    /* ---------------- */
-    /* Consistent height for titles */
-    min-height: 2.2em;
+    white-space: normal;
     line-height: 1.1em;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .price{
     font-family: 500;
-    margin-top: auto; /* Pushes the price to the bottom of the *flowing* content */
+    /* Pushes the price to the bottom of the *flowing* content */
     margin-bottom: 0.5rem; /* Small space between price and the absolute elements below */
 }
 .add-cart{
@@ -440,43 +445,9 @@ body.cart-open .cart-overlay {
     opacity: 1;
     pointer-events: all;
 }
-@media (max-width: 1080px){
-    .nav {
-        padding: 14px 0;
-    }
-    section{
-        padding: 3rem 0 2rem;
-    }
-    .container {
-        margin: 0 auto;
-        width: 90%;
-    }
-    .shop{
-        margin-top: 2rem !important;
-    }
-}
-@media (max-width: 400px){
-    .nav {
-        position: relative;
-        right: 20px;
-        padding: 12px 0;
-        padding-left: 42px;
-    }
-    .logo{
-        font-size: 1rem;
-    }
-    .cart{
-        width: 100%;
-    }
-}
-@media (max-width: 360px){
-    .shop{
-        margin-top: 1rem !important;
-    }
-    .cart{
-        width: 100%;
-    }
-}
+
+
+
 #paypal{
     margin-top: 30px;
 }
@@ -514,8 +485,7 @@ body.cart-open .cart-overlay {
 }
 .pages a {
     position: relative;
-    color: black;
-    background-color: rgb(255, 255, 255);
+
     padding: 8px 14px;
     border-radius: 5px;
     flex: 0 0 auto; /* Prevents buttons from growing/shrinking */
@@ -523,37 +493,24 @@ body.cart-open .cart-overlay {
     text-align: center;
     margin-bottom: 15px;
 }
-.pages a:hover{
-    background-color: aliceblue;
-}
-.pages  .pages{
-    background-color: aliceblue;
 
-}
 #search{
     border-color: none;
     border: solid 1.5px black;
     outline: none;
     outline-color: none;
-    padding: 5px 50px 5px 10px;
-    margin: 5px;
+    padding: 5px;
+    margin: 0px;
     border-radius: 5px;
+    width: 600px;
     
 }
-.search {
-    position: static;
-    top: 100px;
-    display: flex;
-    margin: 10px;
-    flex-direction: column;
-}
+
 .search button{
     padding: 0;
     border: none;
     text-decoration: none; /* No underline */
     display: contents; /* Inline-block for proper spacing */
-    
-    
     cursor: pointer; /* Pointer cursor on hover */
 }
 .search img{
@@ -567,4 +524,93 @@ body.cart-open .cart-overlay {
 }
 .product-box.hide {
     display: none;
+}
+.detailPage{
+    color: black;
+}
+@media (max-width: 1080px){
+    .nav {
+        padding: 14px 0;
+    }
+    section{
+        padding: 3rem 0 2rem;
+    }
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .shop{
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 500px){
+    .logo{
+        font-size: 1rem;
+    }
+    /* ... existing rules ... */
+    #search{
+        width: auto;
+        
+    }
+    .shop-content {
+        /* Explicitly set 2 columns for mobile */
+        grid-template-columns: repeat(2, 1fr);
+        /* Adjust gap for smaller screens to save space */
+        gap: 0.7rem; /* or 10px, whatever looks good on your phone */
+        padding: 0 10px; /* Add some horizontal padding to the shop-content itself */
+    }
+
+    /* Adjust product image size within product box for mobile to ensure fit */
+    .product-img{
+        width: 100%;           /* Take full width of the container */
+        height: 140px;         /* Fixed height for consistency */
+        object-fit: contain;   /* Keep the image proportions */
+        border-radius: 5px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 8px;
+    }
+    .product-title{
+        font-size: 1rem;
+    }
+    .product-box {
+        padding: 8px; /* Slightly less padding on mobile boxes */
+        min-height: 280px; /* Adjust min-height if needed for smaller content */
+        padding-bottom: 40px; /* Less space for absolute elements */
+    }
+
+    .product-box .price {
+        bottom: 25px; /* Adjust price position */
+    }
+
+    .product-box .add-cart {
+        bottom: 5px; /* Adjust add-cart button position */
+        right: 5px;
+        font-size: 1rem; /* Smaller icon */
+        padding: 8px; /* Smaller padding for button */
+    }
+
+    .product-box .product-s {
+        bottom: 10px; /* Adjust size dropdown position */
+        left: 5px;
+    }
+    .product-box .product-title {
+        font-size: 0.95rem; /* Slightly smaller font for titles */
+        min-height: 2.2em; /* Keep it consistent */
+        line-height: 1.1em;
+    }
+    .product-box .price {
+        font-size: 0.9rem; /* Smaller price font */
+    }
+    
+    .product-box .product-s select {
+        font-size: 0.65rem; /* Smaller size text and dropdown */
+    }
+
+    /* You might also want to adjust overall padding for the main content area */
+    .container {
+        padding: 0 10px; /* Add some padding to the main content container */
+    }
 }

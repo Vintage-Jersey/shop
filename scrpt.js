@@ -295,3 +295,31 @@ function initializeProductsForSearch() {
         };
     });
 }
+function goToDetailPage(productBox) {
+  const title = productBox.querySelector('.product-title').innerText;
+  const price = productBox.querySelector('.price').innerText;
+  const img = productBox.querySelector('.product-img').src;
+  const size = productBox.querySelector('.product-size').value;
+
+  const productData = {
+    title,
+    price,
+    img,
+    size
+  };
+
+  localStorage.setItem("selectedProduct", JSON.stringify(productData));
+  window.location.href = "detail.html";
+}
+function addDetailProductToCart() {
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
+    if (!product) return;
+
+    // Get the selected size from the dropdown
+    const sizeSelect = document.getElementById('detail-size');
+    const size = sizeSelect ? sizeSelect.value : product.size || "Medium";
+
+    addProductToCart(product.title, product.price, product.img, size);
+    updateTotal();
+}
+
