@@ -245,7 +245,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    height: 290px; /* Adjust as needed for your design */
+    height: 340px;/* Adjust as needed for your design */
 }
 
 .product-box:hover {
@@ -653,6 +653,9 @@ header {
     #search {
         width: auto;
     }
+    .search {
+        margin-right: 48px; /* Add space for cart icon */
+    }
     #cart-icon {
         position: absolute;
         top: var(--spacing-md);
@@ -692,6 +695,9 @@ header {
 }
 
 @media (max-width: 480px) {
+    .product-box{
+         height: 290px;
+    }
     #search {
         width: auto;
     }
