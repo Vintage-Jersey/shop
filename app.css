@@ -246,6 +246,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     height: 340px;/* Adjust as needed for your design */
+    text-transform: uppercase;
 }
 
 .product-box:hover {
@@ -612,7 +613,9 @@ header {
 
 /* Show all images in a horizontal scroll, keep height fixed */
 
-
+.product-box.hide {
+    display: none;
+}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
